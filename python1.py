@@ -96,3 +96,7 @@ def max(a,b):
     return b
 
 print(max(10,20))
+
+
+x= lambda a : a+20
+print(x(10))
