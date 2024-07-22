@@ -78,3 +78,13 @@ if a > 5:
 else:
     print("a is less than 5")
 
+def count_down(n):
+    while n>0:
+        yield n
+        n -= 1
+
+generator = count_down(10)
+
+print(next(generator))
+print(next(generator))
+print(next(generator))
