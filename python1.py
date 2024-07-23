@@ -99,4 +99,7 @@ print(max(10,20))
 
 
 x= lambda a : a+20
-print(x(10))
+print(x(10)) 
+
+a= lambda x,y: x*y
+print(a(6,8))
