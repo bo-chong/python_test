@@ -103,3 +103,6 @@ print(x(10))
 
 a= lambda x,y: x*y
 print(a(6,8))
+
+#装饰器
+
