@@ -105,4 +105,74 @@ a= lambda x,y: x*y
 print(a(6,8))
 
 #装饰器
+class myfunc:
+   @staticmethod
+   def add(x,y):
+      return x+y
+
+print(myfunc.add(10,20))
+ 
+class myfunc1:
+   @classmethod
+   def add(cls,x,y):
+      return x+y
+
+print(myfunc1.add(10,20))
+
+
+list1 = [1,2,3,4,5]
+
+list1.append(6)
+print(list1)
+list1.extend([7,8,9,10])
+print(list1)
+list1.insert(2,100)
+print(list1)
+list1.remove(100)
+print(list1)
+list1.pop(2)
+print(list1)
+list1.clear()
+
+list2 = [9,7,8,0,1,2,3,4,5]
+aa=list2.index(7)
+print(aa)
+bb=list2.count(8)
+print(bb)
+list2.sort()
+print(list2)
+list2.reverse()
+print(list2)
+
+#栈
+class stack:
+    def __init__(self):
+      self.stack = []
+
+    def push(self,item):
+       self.stack.append(item)
+    def pop(self):
+       if not self.is_empty():
+          return self.stack.pop()
+       else:
+           raise IndexError("Stack is empty")
+    def peek(self):
+       if not self.is_empty():
+          return self.stack[-1]
+       else:
+           raise IndexError("Stack is empty")
+    def is_empty(self):
+       return len(self.stack) == 0
+    def size(self):
+       return len(self.stack)
+
+stack1 = stack()
+stack1.push(10)
+stack1.push(20)
+stack1.push(30)
+print(stack1.pop())
+print(stack1.peek())
+print(stack1.size())
+print(stack1.is_empty())
+
 
