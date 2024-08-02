@@ -176,3 +176,71 @@ print(stack1.size())
 print(stack1.is_empty())
 
 
+from collections import deque
+queue1   = deque()
+queue1.append(10)
+queue1.append(20)
+queue1.append(30)
+
+print("deque:",queue1)
+
+first_element = queue1.popleft()
+print("First element:",first_element)
+print("deque:",queue1)
+
+front_element = queue1[0]
+print("Front element:",front_element)
+
+is_empty = len(queue1) == 0
+print("Is queue empty:",is_empty)
+
+size =len(queue1)
+print("Size of queue:",size)
+
+
+class Queue:
+   def __init__(self):
+        self.items = []
+   def enqueue(self, item):
+       self.items.append(item)
+   def dequeue(self):
+       if not self.is_empty():
+          return self.items.pop(0)
+       else:
+           raise IndexError("Queue is empty")
+   def peek(self):
+       if not self.is_empty():
+          return self.items[0]
+       else :   
+            raise IndexError("Queue is empty")
+       
+   def is_empty(self):
+       return len(self.items) == 0
+   def size(self):
+       return len(self.items)
+   
+
+queue2 = Queue()
+queue2.enqueue(10)
+queue2.enqueue(20)      
+queue2.enqueue(30)
+
+
+print("Queue:",queue2.items)
+
+print("Dequeued element:",queue2.dequeue())
+print("Queue:",queue2.items)
+
+print("Front element:",queue2.peek())
+print("Queue:",queue2.items)
+print("Is queue empty:",queue2.is_empty())
+print("Size of queue:",queue2.size())
+
+vec = [1,2,3,4,5]
+vec1=[x**2 for x in  vec]
+print(vec1)
+
+matrix = [[1,2,3,4],[4,5,6,7],[7,8,9,10]]
+print(matrix)
+[[row[i] for row in matrix] for i in range(4)]
+print(matrix)
