@@ -244,3 +244,7 @@ matrix = [[1,2,3,4],[4,5,6,7],[7,8,9,10]]
 print(matrix)
 [[row[i] for row in matrix] for i in range(4)]
 print(matrix)
+
+
+for x in range(1,11):
+ print(repr(x).rjust(2),repr(x*x).rjust(3),repr(x*x*x).rjust(4))
